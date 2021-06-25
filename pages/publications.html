@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="../js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Osorio-Sandoval</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav" id="barmenu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html">   
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="active-page" href="publications.html">
+                        Publications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cv.html">
+                        CV
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" onclick="toggleMenu()" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="wrapper"></div>
+        </nav>
+    </header>
+    <div class="contents">
+        <div class="container publications"> 
+            <h2>Publications</h>
+            <h3>2020</h3>
+            <div class="paper">
+                <p class="paper-title">Discrete-Event Simulation and Building Information Modelling Based Animation of Construction Activities</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Walid Tizani, Estacio Pereira, Christian Koch, Abdelaziz Fadoul</p>
+                <button data-modal-target="#paper-8" class="paper-cite">Cite</button>
+            </div>   
+            <div class="paper">
+                <p class="paper-title">A Knowledge-Based Model for Constructability Assessment of Buildings Design Using BIM</p>
+                <p class="paper-authors">Abdelaziz Fadoul, Walid Tizani, Carlos Arturo Osorio-Sandoval</p>
+                <button data-modal-target="#paper-7" class="paper-cite">Cite</button>
+            </div>
+            <h3>2018</h3>
+            <div class="paper">
+                <p class="paper-title">A method for discrete event simulation and building information modelling integration using a game engine</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Walid Tizani, Christian Koch</p>
+                <button data-modal-target="#paper-6" class="paper-cite">Cite</button>
+            </div>
+            <div class="paper">
+                <p class="paper-title">A constructability assessment framework for buildings design using Building Information Modelling (BIM)</p>
+                <p class="paper-authors">Abdelaziz Fadoul, Walid Tizani, Christian Koch, Carlos Arturo Osorio-Sandoval</p>
+                <button data-modal-target="#paper-5" class="paper-cite">Cite</button>
+            </div> 
+            <div class="paper">
+                <p class="paper-title">Integration of Building Information Modelling and Discrete Event Simulation within a Game Engine</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Walid Tizani, Christian Koch, Abdelaziz Fadoul</p>
+                <button data-modal-target="#paper-4" class="paper-cite">Cite</button>
+            </div>
+            <h3>2017</h3>
+            <div class="paper">
+                <p class="paper-title">Computer technology for serious games in education: A literature review</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Christian Koch, Walid Tizani</p>
+                <button data-modal-target="#paper-3" class="paper-cite">Cite</button>
+            </div>
+            <h3>2016</h3>
+            <div class="paper">
+                <p class="paper-title">Discrete Event Simulation Analysis of the Effect of Labor Absenteeism on the Duration of Construction Activities in Housing Projects</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Jesús Nicolás Zaragoza-Grifé, Gilberto Abenamar Corona-Suárez, José Antonio González-Fajardo</p>
+                <button data-modal-target="#paper-2" class="paper-cite">Cite</button>
+            </div>
+            <h3>2014</h3>
+            <div class="paper">
+                <p class="paper-title">Determinación del impacto del ausentismo de la mano de obra sobre el tiempo de ejecución de las actividades de construcción de vivienda</p>
+                <p class="paper-authors">Carlos Arturo Osorio-Sandoval, Jesús Nicolás Zaragoza-Grifé</p>
+                <button data-modal-target="#paper-1" class="paper-cite">Cite</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+<!--PAPER INFO FOR CITATIONS-->
+    <div class="modal" id="paper-1">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @inproceedings{osorio2014,<br/>
+                author = {Osorio-Sandoval, Carlos Arturo and Zaragoza-Grif{\'{e}}, Jes{\'{u}}s Nicol{\'{a}}s},<br/>
+                title = {Determinaci{\'{o}}n del impacto del ausentismo de la mano de obra sobre el tiempo de ejecuci{\'{o}}n de las actividades de construcci{\'{o}}n de vivienda},<br/>
+                booktitle = {Administraci{\'{o}}n y Tecnolog{\'{i}}a para Arquitectura, Dise{\~{n}}o e Ingenier{\'{i}}a},<br/>
+                year = {2014},<br/>
+                pages = {153--169},<br/>
+                address = {Mexico City}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-2">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @article{osorio2016,<br/>
+                author = {Osorio-Sandoval, Carlos Arturo and Zaragoza-Grif{\'{e}}, Jes{\'{u}}s Nicol{\'{a}}s and Corona-Su{\'{a}}rez, Gilberto Abenamar and Gonz{\'{a}}lez-Fajardo, Jos{\'{e}} Antonio},<br/>
+                title = {Discrete Event Simulation Analysis of the Effect of Labor Absenteeism on the Duration of Construction Activities in Housing Projects},<br/>
+                journal = {International Journal of Engineering Research and Application},<br/>
+                year = {2016},<br/>
+                volume = {6},<br/>
+                number = {11},<br/>
+                pages = {46 -- 55}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-3">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @inproceedings{osorio2017,<br/>
+                author = {Osorio-Sandoval, Carlos Arturo and Koch, Christian and Tizani, Walid},<br/>
+                title = {Computer technology for serious games in education: A literature review},<br/>
+                booktitle = {Digital Proceedings of the 24th EG-ICE International Workshop on Intelligent Computing in Engineering 2017},<br/>
+                year = {2017},<br/>
+                pages = {239--249}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-4">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @inproceedings{osorio2018a,<br/>
+                author = {Osorio-Sandoval, Carlos Arturo and Tizani, Walid and Koch, Christian and Fadoul, Abdelaziz},<br/>
+                title = {Integration of Building Information Modelling and Discrete Event Simulation within a Game Engine},<br/>
+                booktitle = {17th International Conference on Computing in Civil and Building Engineering},<br/>
+                year = {2018},<br/>
+                address = {Tampere}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-5">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @inproceedings{fadoul2018,<br/>
+                author = {Fadoul, Abdelaziz and Tizani, Walid and Koch, Christian and Osorio-Sandoval, Carlos Arturo},<br/>
+                title = {A Constructability Assessment Framework for Buildings Design Using Building Information Modelling (BIM)},<br/>
+                booktitle = {17th International Conference on Computing in Civil and Building Engineering},<br/>
+                year = {2018},<br/>
+                address = {Tampere}<br/>               
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-6">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @article{osorio2018b,<br/>
+                author = {Osorio-Sandoval, Carlos Arturo and Tizani, Walid and Koch, Christian},<br/>
+                title = {A method for discrete event simulation and building information modelling integration using a game engine},<br/>
+                journal = {Advances in Computational Design},<br/>
+                year = {2018},<br/>
+                volume = {3},<br/>
+                number = {4},<br/>
+                pages = {405--418},<br/>
+                doi = {10.12989/acd.2018.3.4.405}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-7">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">    
+                @inproceedings{fadoul2020,<br/>
+                author={Fadoul, Abdelaziz and Tizani, Walid and Osorio-Sandoval, Carlos Arturo},<br/>
+                title={A Knowledge-Based Model for Constructability Assessment of Buildings Design Using BIM},<br/>
+                booktitle={International Conference on Computing in Civil and Building Engineering},<br/>
+                year={2020},<br/>
+                pages={147--159},<br/>
+                organization={Springer}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+    <div class="modal" id="paper-8">
+        <div class="modal-header">
+            <div class="title">Cite</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="citation">
+                @inproceedings{osorio2020,<br/>
+                author={Osorio-Sandoval, Carlos Arturo and Tizani, Walid and Pereira, Estacio and Koch, Christian and Fadoul, Abdelaziz},<br/>
+                title={Discrete-Event Simulation and Building Information Modelling Based Animation of Construction Activities},<br/>
+                booktitle={International Conference on Computing in Civil and Building Engineering},<br/>
+                year={2020},<br/>
+                pages={285--294},<br/>
+                organization={Springer}<br/>
+                }
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button data-modal-copy class="copy-cite">Copy</button>
+        </div>
+    </div>
+</body>
+</html>

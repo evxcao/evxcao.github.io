@@ -1,0 +1,487 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(50, 50, 50);
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;  
+    height: 20px;
+    padding: 5px;
+    margin: 0;
+    background: white;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: 1fr [start] minmax(0,80%) [end] 1fr;
+}
+
+.contents * {grid-column: start / end;}
+
+/*///////// NAV MENU /////////*/
+@media only screen and (max-width: 450px) {
+    .topnav a {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.active .nav-item {
+        display: block;
+        text-align: right;
+        margin: 30px 20px -25px 0;
+    }
+
+    .topnav.active a {
+        display: block;
+    }
+
+    .topnav.active .wrapper {
+        background-color: white;
+        width: 100%;
+        margin: -147px 0 0 0;
+        min-height: 120px;
+        z-index: 2;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .topnav a {
+        display: inline-block;
+    }
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a.icon {
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    top: 10px;
+}
+
+.fa.fa-bars, .fa.fa-bars:visited, .fa.fa-bars:active {
+    color:rgb(50, 50, 50);
+    width: 14px;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:active {
+    color: seagreen;
+}
+
+a.active-page {
+    color:teal;
+}
+
+/*/////////// HOME ///////////*/
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile {
+    text-align: center;
+    margin: auto;
+}
+
+.photo {
+    clip-path: circle();
+}
+
+.name {
+    margin-top: -20px;
+    font-size: 2em;
+    color: white;
+}
+
+.position {
+    font-size: large;
+}
+
+a.affiliation, a.affiliation:visited {
+    display: block;
+    cursor: pointer;
+    margin: 15px;
+    color: seagreen;
+    font-size:large;
+}
+
+a.affiliation:hover {
+    opacity: 0.7;
+}
+
+.social {
+    font-size: 40px;
+}
+
+.fa, .ai, .fa:visited, .ai:visited {
+    color: white;
+    font-size: 40px;
+    width: 60px;
+}
+
+.fa:hover, .ai:hover { 
+    opacity: 0.7;
+}
+
+.about-me {
+    margin: auto;
+}
+
+.about-me h1 {
+    margin-left: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .about-me {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .about-me {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .about-me {
+        max-width: 60%;
+    }
+}
+
+.about-me .text {
+    margin: 5px 0 0 20px;
+}
+
+.mini-cv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mini-cv-item {
+    margin-left: 20px;
+}
+
+.edu-list {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.education-item {
+    margin-bottom: 10px;
+}
+
+.education-item:before {
+    content: "\f19d";
+    font-family: FontAwesome;
+    font-size: large;
+    padding-left: -1rem;
+    width: 1rem; 
+}
+
+.education-description {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.degree {
+    margin: 0;
+}
+
+.department {
+    color: lightgrey;
+    font-size: small;
+    font-weight: bold;
+    margin:0;
+}
+
+.contents .publications {
+    display: block;
+    margin-left: 30px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.publications h2, h3 {
+    margin-left: -15px;
+}
+
+.paper-title, .project-title {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.paper-authors, .project-dates {
+    font-weight: bold;
+    font-size:smaller;
+    margin: 0;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project-details {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.paper-cite {
+    background: none;    
+    font-size: x-small;
+    color:seagreen;
+    font-weight: bolder;
+    border: 2px solid seagreen;
+    border-radius: 8px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.paper-cite:hover {
+    color: white;
+    background-color: seagreen;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: rgb(50, 50, 50);
+    z-index: 10;
+    width: 500px;
+    max-width: 50%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);   
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color:white;
+}
+
+.modal-body {
+    margin: 0 15px 10px 15px;
+    padding: 10px;
+    background-color: darkslategray;
+    color:linen;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.citation {
+    margin:0 0 0 2em;
+    text-indent: -2em;
+}
+
+.modal-footer {
+    padding: 0 15px 10px 15px;
+    float: right;
+    align-items: center;
+}
+
+.modal-footer .copy-cite {
+    background: none;
+    color:seagreen;
+    font-weight: bolder;
+    border: 2px solid seagreen;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-footer .copy-cite:hover {
+    color: white;
+    background-color: seagreen;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*////// CV //////*/
+.CV {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+
+.download:hover {
+    opacity: .7;
+}
+
+.download a {
+    color: white;
+}
+
+/*///// CONTACT FORM /////*/
+.container.cf {
+    display: block;
+    padding: 10px 30px;
+}
+
+.contact-form {
+    margin: auto;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.cf-input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.cf-control {
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: rgb(50, 50, 50);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.75rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.cf-control:focus {
+    border: 3px solid seagreen;
+}
+
+select.cf-control[size], select.cf-control[multiple] {
+    height: auto;
+}
+
+textarea.cf-control {
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+}
+
+.cf-button {
+    float: right;
+    margin: 0;
+    border: 2px solid seagreen;
+    border-radius: 8px;
+    background: none;  
+    color:seagreen;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.cf-button:hover {
+    background: seagreen;
+    color: white;
+}
+
+.highlight-link, .highlight-link:visited {
+    color: seagreen;
+    font-weight: bold;
+}
+
+.highlight-link:hover {
+    opacity: 0.7;
+}
+
+.info, .info:visited {
+    margin: 0;
+    padding: 2px;
+    border: 2px solid seagreen;
+    border-radius: 8px;
+    background: none;  
+    color:seagreen;
+    font-size: x-small;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.info:hover {
+    background: seagreen;
+    color: white;
+}
+
+

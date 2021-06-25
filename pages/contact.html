@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
+    <script defer src="../js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Osorio-Sandoval</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav" id="barmenu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html">   
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html">
+                        Publications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cv.html">
+                        CV
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a  class="active-page" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" onclick="toggleMenu()" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="wrapper"></div>
+        </nav>
+    </header>
+    <div class="container cf">
+        <div class="contact-form">
+            <h2>Contact me</h2>
+            <p>Please send your message using the form below.<br/>
+            I will be in contact with you shortly!</p>
+            <form id="contact-form-id" method="post" action="../php/contact-form-process.php">
+                <div class="cf-form-group">
+                    <label for="Name" class="cf-label">Name</label>
+                    <div class="cf-input-group">
+                        <input type="text" name="name" class="cf-control" placeholder="Your name" required>             
+                    </div>
+                </div>
+                <div class="cf-form-group">
+                    <label for="Email" class="cf-label">Email</label>
+                    <div class="cf-input-group">
+                        <input type="email" name="email" placeholder="Your email address" class="cf-control" required>             
+                    </div>
+                </div>
+                <div class="cf-form-group">
+                    <label for="Message" class="cf-label">Message</label>
+                    <div class="cf-input-group">
+                        <textarea id="Message" name="message" placeholder="Your message" class="cf-control" rows="8" maxlength="3000" required></textarea>             
+                    </div>
+                </div>
+                <div class="cf-form-group">
+                    <button type="submit" name="submit" id="cf-button" class="cf-button">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>  
+</body>
+</html>
